@@ -3,7 +3,7 @@ import bg1 from './images/photo-of-people-near-wooden-table-3184431.jpg'
 import bg2 from './images/pexels-thirdman-6109288.jpg'
 import bg3 from './images/pexels-thirdman-6109288.jpg'
 import bg4 from './images/blue-and-red-galaxy-artwork-1629236.jpg'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const About = () => {
@@ -109,7 +109,7 @@ const About = () => {
             </p>
             <p>This company is envisioned to be one of the leading company in construction industry that would be
                 able to finish projects at a very shorter time than it is expected.</p>
-            <a className="link" href="/services">Visit Our work<i className="fas fa-chevron-right"></i></a>
+            <a className="link" href="/services">Visit Our work<FontAwesomeIcon icon={['fas', 'chevron-right']} /></a>
         </div>
 
     </div>

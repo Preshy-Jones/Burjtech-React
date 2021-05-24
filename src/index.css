@@ -764,7 +764,7 @@ body {
    display: grid;
    grid-gap: 20px;
 }
-.service i{
+.service .i{
    font-size: 3rem;
    color: #ffc107;
    justify-self: center;
@@ -818,7 +818,7 @@ body {
 
 }
 
-.info i{
+.info .i{
    justify-self: center;
    align-self: center;
    color: #666666;

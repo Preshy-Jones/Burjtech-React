@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = () => {
   return (
@@ -17,17 +18,17 @@ const Contact = () => {
 <section className="showcase-cnt-2">
     <div className="info">
         <div className="info-bar">
-            <i className="far fa-address-book"></i>
+        <FontAwesomeIcon className="i" icon={['far', 'address-book']} />
             <h1>Address:</h1>
             <p>54, Adeniyi Jones,<br/> Ikeja Lagos.</p>
         </div>
         <div className="info-bar" id="info-border">
-            <i className="fas fa-mobile-alt"></i>
+        <FontAwesomeIcon className="i" icon={['fas', 'mobile-alt']} />
             <h1>Phone:</h1>
             <h2>08068463954<br/> 07033259358</h2>
         </div>
         <div className="info-bar">
-            <i className="far fa-envelope"></i>
+        <FontAwesomeIcon className="i" icon={['far', 'envelope']} />
             <h1>Email:</h1>
             <h2>blah@email.com</h2>
         </div>

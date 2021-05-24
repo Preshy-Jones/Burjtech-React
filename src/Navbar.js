@@ -1,5 +1,5 @@
- import React from 'react'
-import {useEffect, useRef, useState} from 'react';
+import React from 'react'
+import { useRef, useState} from 'react';
 
 
 
@@ -24,19 +24,7 @@ const Navbar = () => {
             return {...acc,[key]:{animation: `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`}}
           },state);
        });
-        // Object.keys(animations).forEach((link, index) => {
-        //     if (animations[link].animation) {
-        //       setAnimations(prevState =>{
-        //         return  {...prevState,  animation: ''}
-        //       });
-        //     } else {
-
-        //           setAnimations(prevState =>{
-        //             return  {link: {animation: `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`}}
-        //           });
-        //           console.log(animations);
-        //     }            
-        //   })          
+ 
           burger.classList.toggle('toggle') 
  }
   

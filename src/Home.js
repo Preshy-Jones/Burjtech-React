@@ -14,6 +14,9 @@ import bg7 from './images/pexels-photo-5598296.jpeg'
 import bg9 from './images/photo-of-people-near-wooden-table-3184431.jpg'
 import bg10 from './images/industry-metal-fire-radio-73833.jpg'
 import {useState, useEffect, useRef} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 
 const Home = () => {
 
@@ -25,8 +28,8 @@ const [style, setStyle] = useState({
 
 const [counter, setCounter] = useState(0)
 
-// const counter =  useRef(1)
-var images = [cn1, cn2, cn3,cn4]
+
+const images = [cn1, cn2, cn3,cn4]
 const autoPlayRef = useRef()
 
 
@@ -38,21 +41,14 @@ useEffect(() => {
   function changeImage() {
     if (counter >= images.length) {
         return setCounter(0);
-        // counter.current = 1;
     }
 
     setStyle({
       backgroundImage:  `url(${images[counter]})`
     })
      setCounter(counter+1);
-   // console.log(counter);
-    // counter.current = counter.current + 1
 }
-
-
   autoPlayRef.current = changeImage
-
-// setInterval(changeImage, 3000)
 })
 
 useEffect(()=>{
@@ -129,7 +125,7 @@ useEffect(()=>{
               To provide rapid innovative and high quality services while maintaining full transparency
               throughout
               the whole process </p>
-            <a className="link" href="/about">LEARN MORE<i className="fas fa-chevron-right"></i></a>
+            <a className="link" href="/about">LEARN MORE<FontAwesomeIcon icon={['fas', 'chevron-right']} /></a>
           </div>
           <div className="img" style={{backgroundImage: `url(${bg7})`}}>
 
@@ -146,16 +142,16 @@ useEffect(()=>{
           </div>
           <div className="reasons">
             <div className="choose">
-              <i className="far fa-clock"></i>
+            <FontAwesomeIcon className="far" icon={['far', 'clock']} />
               <h2>Always on time</h2>
             </div>
             <div className="choose">
-              <i className="fas fa-check"></i>
+            <FontAwesomeIcon className="fas" icon={['fas', 'check']} />
               <h2>Hard Working</h2>
 
             </div>
             <div className="choose">
-              <i className="fas fa-calendar-alt"></i>
+            <FontAwesomeIcon className="fas" icon={['fas', 'calendar-alt']} />
               <h2>24/7 Availability</h2>
             </div>
           </div>
@@ -175,7 +171,7 @@ useEffect(()=>{
               <div className="fi">
                 <div className="hate">
                   <div className="icon">
-                    <i className="far fa-id-card"></i>
+                  <FontAwesomeIcon className="far" icon={['far', 'id-card']} />
                   </div>
                   <h3>Contact Us </h3>
                   <p>A small river named Duden flows by their place and supplies it with you</p>
@@ -186,7 +182,7 @@ useEffect(()=>{
               <div className="fi">
                 <div className="hate">
                   <div className="icon">
-                    <i className="fas fa-people-carry"></i>
+                  <FontAwesomeIcon className="fas" icon={['fas', 'people-carry']} />
                   </div>
                   <h3>Make Request </h3>
                   <p>A small river named Duden flows by their place and supplies it with you</p>
@@ -197,7 +193,7 @@ useEffect(()=>{
               <div className="fi">
                 <div className="hate">
                   <div className="icon">
-                    <i className="fas fa-street-view"></i>
+                  <FontAwesomeIcon className="fas" icon={['fas', 'street-view']} />
                   </div>
                   <h3>Negotiate </h3>
                   <p>A small river named Duden flows by their place and supplies it with you</p>
@@ -208,7 +204,7 @@ useEffect(()=>{
               <div className="fi">
                 <div className="hate">
                   <div className="icon">
-                    <i className="far fa-smile"></i>
+                  <FontAwesomeIcon className="far" icon={['far', 'smile']} />
                   </div>
                   <h3>Enjoy the service</h3>
                   <p>A small river named Duden flows by their place and supplies it with you</p>
@@ -240,7 +236,7 @@ useEffect(()=>{
                 Our effort is to attend to emergency repairs, maintenance and construction services in Lagos
                 and
                 Nigeria.</p>
-              <a className="link reduc" href="/about">LEARN MORE<i className="fas fa-chevron-right"></i></a>
+              <a className="link reduc" href="/about">LEARN MORE<FontAwesomeIcon icon={['fas', 'chevron-right']} /></a>
             </div>
           </div>
         </div>
@@ -260,7 +256,7 @@ useEffect(()=>{
               projects.
             </p>
 
-            <a className="link reduc" href="/services">Visit Our work<i className="fas fa-chevron-right"></i></a>
+            <a className="link reduc" href="/services">Visit Our work<FontAwesomeIcon icon={['fas', 'chevron-right']} /></a>
           </div>
           <div className="img-2" style={{backgroundImage: `url(${bg10})`}}>
 

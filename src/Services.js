@@ -5,7 +5,7 @@ import bg3 from './images/abstract-blackboard-bulb-chalk-355948.jpg'
 import bg4 from './images/pexels-ola-dapo-3345882.jpg'
 import bg5 from './images/pexels-karolina-grabowska-4386465.jpg'
 import bg6 from './images/cloud.jpg'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const Services = () => {
@@ -90,74 +90,74 @@ const Services = () => {
 <section className="showcase-svs-2">
     <div className="services">
         <div className="service">
-            <i className="fas fa-hammer"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'hammer']} />
             <h1>Rapid Résponse Construction
                 Renovation
                 Repairs
                 Maintenance</h1>
         </div>
         <div className="service">
-            <i className="fas fa-wrench"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'wrench']} />
             <h1>Technological construction</h1>
         </div>
         <div className="service">
-            <i className="fab fa-innosoft"></i>
+        <FontAwesomeIcon className='i' icon={['fab', 'innosoft']} />
             <h1>Designs</h1>
         </div>
         <div className="service">
-            <i className="fas fa-book-reader"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'book-reader']} />
             <h1>Smart Equipments installation</h1>
         </div>
         <div className="service">
-            <i className="fas fa-check"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'check']} />
             <h1>Buying and selling of properties</h1>
         </div>
         <div className="service">
-            <i className="fas fa-tasks"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'tasks']} />
             <h1>Project Managers</h1>
         </div>
         <div className="service">
-            <i className="fas fa-angle-double-down"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'angle-double-down']} />
             <h1> Manufacturers</h1>
         </div>
         <div className="service">
-            <i className="fab fa-acquisitions-incorporated"></i>
+        <FontAwesomeIcon className='i' icon={['fab', 'acquisitions-incorporated']} />
             <h1>Autonomous Equipments</h1>
         </div>
         <div className="service">
-            <i className="fab fa-buffer"></i>
+        <FontAwesomeIcon className='i' icon={['fab', 'buffer']} />
             <h1>Smart Developers</h1>
         </div>
         <div className="service">
-            <i className="fas fa-cloud"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'cloud']} />
             <h1>Cloud base Technology</h1>
         </div>
         <div className="service">
-            <i className="fas fa-mobile-alt"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'mobile-alt']} />
             <h1>Mobile based Technology </h1>
         </div>
         <div className="service">
-            <i className="fas fa-briefcase"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'briefcase']} />
             <h1>Medical Technology </h1>
         </div>
         <div className="service">
-            <i className="fas fa-arrows-alt"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'arrows-alt']} />
             <h1>Entertainment Technology</h1>
         </div>
         <div className="service">
-            <i className="fas fa-atom"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'atomt']} />
             <h1>Space Technology </h1>
         </div>
         <div className="service">
-            <i className="fas fa-assistive-listening-systems"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'assistive-listening-systems']} />
             <h1>Oil and Gas</h1>
         </div>
         <div className="service">
-            <i className="fas fa-archive"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'archive']} />
             <h1>International trading and services </h1>
         </div>
         <div className="service">
-            <i className="fas fa-briefcase"></i>
+        <FontAwesomeIcon className='i' icon={['fas', 'briefcase']} />
             <h1>General Contractors</h1>
         </div>
     </div>
