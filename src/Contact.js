@@ -1,7 +1,55 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {useState} from 'react'
+import axios from 'axios'
 
 const Contact = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [subject, setSubject] = useState('')
+    const [phone, setPhone] = useState('')
+    const [message, setMessage] = useState('')
+    const [sent, setSent] = useState(false)
+    const [isLoading, setisLoading] = useState(false)
+    const data = {name,email,subject,phone,message}
+
+    const handleSubmit = async(e)=>{
+        console.log(data);
+        e.preventDefault()
+        setisLoading(true)
+
+        // try{
+        //     await axios.post("http://localhost:3030/send", 
+        //     {
+        //         name,
+        //         email,
+        //         subject,
+        //         phone,
+        //         message
+        //     },
+        //     {
+        //         headers: {
+        //           'Content-Type': 'application/x-www-form-urlencoded'
+                
+        //         }
+        //     })
+        // } catch(error){
+        //     console.log(error);
+        // }
+        setTimeout(() => {
+        axios({
+            method: "POST", 
+            url:"https://burjtech-api.herokuapp.com/send", 
+            data:  data,    
+            headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+                }
+          }).then(() => {
+            setSent(true)      
+            setisLoading(false)
+          })
+        }, 2000);
+    }
   return (
     <div>
     <section className="showcase-cnt">
@@ -35,25 +83,57 @@ const Contact = () => {
     </div>
 </section>
 <section className="showcase-cnt-3">
+    {isLoading && <h1>Loading</h1>}
+    {sent && <h1>Email has been sent</h1>}
     <h1>Get In Touch</h1>
-    <form method="POST" action="/send" className="form">
-        <p>
-            
-        </p>
+    <form 
+    onSubmit={handleSubmit}
+     className="form">
         <div className="form-group">
-            <input name="name" type="text" className="form-box" placeholder="Your Name"/>
+            <input 
+            name="name" 
+            type="text" 
+            required
+            value={name}
+            onChange={(e)=>setName(e.target.value)}
+            className="form-box" 
+            placeholder="Your Name"/>
         </div>
         <div className="form-group">
-            <input name="email" type="text" className="form-box" placeholder="Your Email"/>
+            <input 
+            name="email" 
+            type="text"
+            required
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)} 
+            className="form-box" placeholder="Your Email"/>
         </div>
         <div className="form-group">
-            <input name="subject" type="text" className="form-box" placeholder="Subject"/>
+            <input 
+            name="subject" 
+            type="text"
+            required
+            value={subject}
+            onChange={(e)=>setSubject(e.target.value)} 
+            className="form-box" placeholder="Subject"/>
         </div>
         <div className="form-group">
-            <input name="phone" type="text" className="form-box" placeholder="Phone No."/>
+            <input 
+            name="phone" 
+            type="text" 
+            required
+            value={phone}
+            onChange={(e)=>setPhone(e.target.value)} 
+            className="form-box" placeholder="Phone No."/>
         </div>
         <div className="form-group">
-            <textarea name="message" id="message" rows="7" placeholder="Message"></textarea>
+            <textarea 
+            name="message" 
+            id="message"
+            required
+            value={message}
+            onChange={(e)=>setMessage(e.target.value)}  
+            rows="7" placeholder="Message"></textarea>
         </div>
         <div className="form-group">
             <input type="submit" value="Send Message" className="submit"/>
