@@ -47,6 +47,11 @@ const Contact = () => {
           }).then(() => {
             setSent(true)      
             setisLoading(false)
+            setName('')
+            setPhone('')
+            setEmail('')
+            setSubject('')
+            setMessage('')
           })
         }, 2000);
     }
